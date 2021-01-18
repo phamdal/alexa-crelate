@@ -1,0 +1,82 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "crelate talent",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetNumberApplicationsIntent",
+          "slots": [],
+          "samples": [
+            "how many applications do I have"
+          ]
+        },
+        {
+          "name": "JobNotesIntent",
+          "slots": [],
+          "samples": [
+            "give me the latest notes"
+          ]
+        },
+        {
+          "name": "ListInfoIntent",
+          "slots": [],
+          "samples": [
+            "Tell me about my Awesome People list in Crelate"
+          ]
+        },
+        {
+          "name": "CreateNoteOnJobIntent",
+          "slots": [
+            {
+              "name": "noteBody",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "create a note on my job to {noteBody}"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "12"
+}
