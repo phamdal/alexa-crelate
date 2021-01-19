@@ -35,6 +35,10 @@ const HelloWorldIntentHandler = {
     }
 };
 
+
+/**
+ *  Creates a note on a designated job
+ */
 const CreateNoteOnJobHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -80,6 +84,9 @@ const CreateNoteOnJobHandler = {
     }
 }; 
 
+/**
+ * Given a designated list - gives details about the list, how many records & reads off at most 3 records on the list
+ */
 const ListInfoHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -138,6 +145,9 @@ const ListInfoHandler = {
     }
 }; 
 
+/**
+ * Read off the most recent (up to 3) notes on a job
+ */
 const JobNotesHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -177,7 +187,9 @@ const JobNotesHandler = {
     }
 }; 
 
-
+/**
+ * Says the number of applicants for a designated job
+ */
 const GetNumberApplicationsHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -219,6 +231,10 @@ const GetNumberApplicationsHandler = {
     }
 };
 
+/**
+ * Helper http function for GETs
+ * @param {url to GET} url 
+ */
 const getHttp = function(url) {
     return new Promise((resolve, reject) => {
         const request = https.get(`${url}`, response => {
@@ -246,6 +262,11 @@ const getHttp = function(url) {
 }; 
 
 // TODO: Consolidate
+/**
+ * Helper http function
+ * @param {full http request} options 
+ * @param {post data to include} data 
+ */
 const postHttp = function(options, data) {
     return new Promise((resolve, reject) => {
         const request = https.request(options, response => {
